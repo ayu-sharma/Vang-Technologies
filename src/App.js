@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import About from './Components/About';
+import { useState } from'react';
 
-function App() {
+function App() { 
+  const [selectedOption, setSelectedOption] = useState("home");
+
+  const handleNavOptionClick = (option) => {
+    setSelectedOption(option);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='min-h-[100vh] relative flex flex-col justify-between'>
+      <div className='z-10 fixedw-full'>
+      <Navbar className="navbar" handleNavOptionClick={handleNavOptionClick} selectedOption={selectedOption}/>
+      </div>
+    <div className={``}>
+    <div id="home" className={`flex flex-col justify-center items-center`}>
+    {selectedOption === "home" && <Home />}
+   </div>
+   <div id="about" className="flex flex-col justify-center items-center">
+   {selectedOption === "about" && <About />}
+   </div>
+    </div>
+      <div>
+        <Footer/>
+      </div>
     </div>
   );
 }
