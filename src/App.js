@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';
 import { useState } from'react';
+import Product from './Components/Product';
 
 function App() { 
   const [selectedOption, setSelectedOption] = useState("home");
@@ -13,7 +14,7 @@ function App() {
   }
   return (
     <div className='min-h-[100vh] relative flex flex-col justify-between'>
-      <div className='z-10 fixedw-full'>
+      <div className='z-10 fixed w-full'>
       <Navbar className="navbar" handleNavOptionClick={handleNavOptionClick} selectedOption={selectedOption}/>
       </div>
     <div className={``}>
@@ -22,6 +23,9 @@ function App() {
    </div>
    <div id="about" className="flex flex-col justify-center items-center">
    {selectedOption === "about" && <About />}
+   </div>
+   <div id="about" className="flex flex-col justify-center items-center">
+   {selectedOption === "about" && <Product />}
    </div>
     </div>
       <div>
