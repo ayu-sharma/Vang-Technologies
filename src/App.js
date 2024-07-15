@@ -13,7 +13,7 @@ function App() {
     setSelectedOption(option);
   }
   return (
-    <div className='min-h-[100vh] relative flex flex-col justify-between'>
+    <div className='min-h-[100vh] w-full relative flex flex-col justify-between'>
       <div className='z-10 fixed w-full'>
       <Navbar className="navbar" handleNavOptionClick={handleNavOptionClick} selectedOption={selectedOption}/>
       </div>
@@ -21,11 +21,11 @@ function App() {
     <div id="home" className={`flex flex-col justify-center items-center`}>
     {selectedOption === "home" && <Home />}
    </div>
-   <div id="about" className="flex flex-col justify-center items-center">
+   <div id="about" className="flex flex-col justify-center items-center overflow-hidden w-full relative">
    {selectedOption === "about" && <About />}
    </div>
-   <div id="about" className="flex flex-col justify-center items-center">
-   {selectedOption === "about" && <Product />}
+   <div id="about" className="flex flex-col justify-center items-center w-full">
+   {selectedOption === "products" && <Product />}
    </div>
     </div>
       <div>

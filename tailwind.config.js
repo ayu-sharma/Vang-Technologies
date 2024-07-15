@@ -6,9 +6,30 @@ module.exports = {
   ],
   
   theme: {
-    extend: {},
+    extend: {
+        screens: {
+          'sm': {'min': '640px'},
+        'md': {'min': '768px'},
+        'lg': {'min': '1024px'},
+        'xl': {'min': '1280px'},
+         'cs': {'max': '1350px'}
+        },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none', /* Internet Explorer 10+ */
+          'scrollbar-width': 'none', /* Firefox */
+        },
+        '.no-scrollbar::-webkit-scrollbar': {
+          'display': 'none', /* Safari and Chrome */
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive'])
+    }
   ],
+}
 }
