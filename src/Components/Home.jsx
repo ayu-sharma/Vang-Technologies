@@ -1,6 +1,7 @@
 import React from 'react'
 import CarousalPage from './CarousalPage'
 import Statistics from './Statistics'
+import Displayproduct from './Displayproduct'
 
 function Home() {
   const images = [ { src: '/Images/home-page-1.svg', alt: '1' },
