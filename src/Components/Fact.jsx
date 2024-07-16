@@ -38,14 +38,14 @@ const fact= [
   },
   {
     id:"active hotes", 
-    title: "500+",
-    subtitle: "Hotels and Restro's pan India",
+    title: "200+",
+    subtitle: "Hotels pan India",
     smalltitle: "as of 31 December 2023"
   },
   {
     id:"new costumers", 
-    title: "50K+",
-    subtitle: "New Costumers Every Day",
+    title: "300+",
+    subtitle: "Restaurants pan India",
     smalltitle: "as of 31 December 2023"
   }
  ]

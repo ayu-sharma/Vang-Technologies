@@ -1,8 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect  } from 'react';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import Avatar from '@mui/material/Avatar';
+import React, { useState } from 'react';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -27,7 +24,7 @@ const handleOptionClick = (option) => {
       <div className="container-fluid justify-between gap-1">
     {/* <div classNameName='py-6 px-16 bg-[#white] top-0 left-0 z-50 shadow' style={{ width: '100%' }}> */}
     <a className="navbar-brand lg:text-3xl text-xl font-semibold justify-center items-center lg:mx-10 md:mr-10" href="#">
-        <img src="/Images/company-logo.svg" alt height="80" width="80"/>
+        <img src="/Images/company-logo.svg" alt="navbar" height="80" width="80"/>
     </a>
       <div classNameName='lg:hidden flex justify-end'>
       <button onClick={toggleHamburger} className= "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,21 +34,21 @@ const handleOptionClick = (option) => {
 <div className={`navbar-collapse transform transition-transform duration-300 ease-in-out mx-auto justify-between  ${isOpen ? "block": "hidden"}`} id="navbarSupportedContent">
 <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <a className="nav-link active"  style={{fontSize: "20px"}} aria-current="page" href="#" onClick={() => handleOptionClick("home")}>Home</a>
+          <a className="nav-link active cursor-pointer"  style={{fontSize: "20px"}} aria-current="page" onClick={() => handleOptionClick("home")}>Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" style={{fontSize: "20px"}} href="#" onClick={() => handleOptionClick("about")}>About Us</a>
+          <a className="nav-link cursor-pointer" style={{fontSize: "20px"}} onClick={() => handleOptionClick("about")}>About Us</a>
         </li> 
         <li className="nav-item">
-          <a className="nav-link" style={{fontSize: "20px"}} href="#" onClick={() => handleOptionClick("products")}>Products</a>
+          <a className="nav-link cursor-pointer" style={{fontSize: "20px"}} onClick={() => handleOptionClick("products")}>Our Products</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" style={{fontSize: "20px"}} href="#" onClick={() => handleOptionClick("costumers")}>
+          <a className="nav-link cursor-pointer" style={{fontSize: "20px"}} onClick={() => handleOptionClick("costumers")}>
             Costumers
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" style={{fontSize: "20px"}} href="#" onClick={() => handleOptionClick("contact")}>
+          <a className="nav-link cursor-pointer" style={{fontSize: "20px"}} onClick={() => handleOptionClick("contact")}>
             Contact Us
           </a>
         </li>
