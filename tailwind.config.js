@@ -12,7 +12,7 @@ module.exports = {
         'md': {'min': '768px'},
         'lg': {'min': '1024px'},
         'xl': {'min': '1280px'},
-         'cs': {'max': '1350px'}
+         'cs': {'max': '1200px'}
         },
   },
   plugins: [

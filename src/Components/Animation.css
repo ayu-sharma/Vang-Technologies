@@ -1,0 +1,17 @@
+@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0.25;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    animation: slide-in 1000ms forwards;
+    /* Remove iteration count if you only want it to play once */
+    animation-iteration-count: 3;
+  }
+  

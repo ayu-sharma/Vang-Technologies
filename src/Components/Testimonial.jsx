@@ -16,7 +16,7 @@ function Testimonial() {
   };
   return (
    
-    <div className="container mx-auto lg:px-5 px-1 py-24">
+    <div className="container mx-auto lg:px-5 px-1">
       <div className="flex justify-between items-center mb-4">
         <button className='lg:text-3xl text-xs md:text-2xl' onClick={prevTestimonial}> <GrLinkPrevious /></button>
       <AnimatePresence mode = "wait">

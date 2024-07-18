@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Product() {
   return (
     <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24">
+  <div class="container lg:px-5 py-24">
       <p className='text-4xl mb-12 font-bold'>Our Products</p>
       <div className=' mx-auto flex flex-wrap'>
     <div class="flex flex-wrap -m-4">

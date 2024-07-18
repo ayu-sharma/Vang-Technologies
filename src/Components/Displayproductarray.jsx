@@ -15,14 +15,14 @@ const Productinfo= [
         img2:""
     },
     {
-        id: "2",
+        id: "3",
         title:"Inventory Management",
         content: "This warehouse inventory management software oversees the flow of goods in and out of warehouses, maintaining precise control over stock levels. It employs robust tracking mechanisms to monitor the movement of items throughout the supply chain, from receipt to distribution. By automating inventory management processes, it minimizes errors and discrepancies, ensuring that stock levels remain accurate and up-to-date at all times. The software provides detailed insights into inventory status, enabling timely replenishment and efficient allocation of resources. Ultimately, it enhances operational efficiency by optimizing inventory control, reducing storage costs, and improving overall supply chain management for enhanced business productivity.",
         img1:"",
         img2:""
     },
     {
-        id: "2",
+        id: "4",
         title:"MRP Management software",
         content: "This retail pricing optimization software ensures uniform and precise pricing strategies across multiple stores. By analyzing market trends, competitor pricing, and internal metrics, it adjusts prices dynamically to maximize profitability while maintaining competitiveness. The software employs advanced algorithms to recommend optimal pricing for products, considering factors like demand elasticity and seasonal variations. It streamlines pricing updates across all locations, ensuring consistency and accuracy in product pricing. This capability not only improves profit margins but also enhances customer satisfaction by offering competitive prices that reflect market conditions effectively. Overall, the software empowers retailers to make data-driven pricing decisions that drive sales and profitability.",
         img1:"",
