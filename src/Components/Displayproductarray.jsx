@@ -1,11 +1,10 @@
 const Productinfo= [
-
     {
         id: "1",
         title:"Front Office Management",
         content: "This software optimizes hotel reception operations by streamlining guest check-ins, reservations, and overall desk efficiency. It facilitates smooth guest experiences through efficient check-in processes, seamless reservation management, and enhanced desk operations. By automating tasks and centralizing guest information, it improves operational efficiency, ensuring quick and accurate service delivery. This solution empowers hotel staff to focus more on guest satisfaction, offering a seamless and personalized experience from arrival to departure. It integrates robust features for managing bookings, room allocations, and guest preferences, contributing to enhanced guest loyalty and operational excellence across hospitality environments.",
-        img1:"",
-        img2:""
+        img1:"/Images/front-office-img1.svg",
+        img2:"/Images/front-office-img2.svg"
     },
     {
         id: "2",

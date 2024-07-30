@@ -1,12 +1,14 @@
 import { useState } from 'react';
-
+import axios from "axios";
+import {PacmanLoader} from 'react-spinners';
 function Contact() {
   const [formData, setFormData] = useState({
-    Nmae:'',
-    Email: '',
-    Address:"",
-    subject: '',
-    message: ''
+    name:"",
+    email: "",
+    phone_number:"",
+    address:"",
+    business: "",
+    message: ""
   });
   const [errorMessage, setErrorMessage] = useState('');
   const [sending, setSending] = useState(false);
@@ -21,7 +23,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Validation logic could be added here
-    if (!formData.Email || !formData.subject || !formData.message) {
+    if (!formData.email || !formData.name || !formData.message || !formData.phone_number || !formData.address || !formData.address || !formData.business) {
       setErrorMessage('Please fill out all fields.');
       return;
     }
@@ -29,23 +31,15 @@ function Contact() {
     // Simulate sending (replace with actual sending logic)
     setSending(true);
     try {
-      // Example: Call API to send email
-      // Replace with actual API call
-      // const response = await fetch('url', {
-      //   method: 'POST',
-      //   body: JSON.stringify(formData),
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   }
-      // });
-      // const data = await response.json();
-      
-      // Simulated success
+      await axios.post('https://formspree.io/f/xpwaqvva', formData);
       setSent(true);
       setFormData({
-        Email: '',
-        subject: '',
-        message: ''
+        name:"",
+        email: "",
+        phone_number:"",
+        address:"",
+        business: "",
+        message: ""
       });
     } catch (error) {
       console.error('Error sending email:', error);
@@ -90,8 +84,8 @@ function Contact() {
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Your Name:</label>
               <input
                 type="text"
-                id="Name"
-                name="Name"
+                id="name"
+                name="name"
                 placeholder="Your Name..."
                 className="mt-1 block w-full py-3 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={formData.name}
@@ -102,11 +96,11 @@ function Contact() {
               <label htmlFor="Email" className="block text-sm font-medium text-gray-700">Your Email:</label>
               <input
                 type="text"
-                id="Email"
-                name="Email"
+                id="email"
+                name="email"
                 placeholder="john@example.com"
                 className="mt-1 block w-full py-3 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                value={formData.Email}
+                value={formData.email}
                 onChange={handleChange}
               />
             </div>
@@ -114,11 +108,11 @@ function Contact() {
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Phone Number:</label>
               <input
                 type="number"
-                id="Number"
-                name="Number"
+                id="phone_number"
+                name="phone_number"
                 placeholder="Phone Number..."
                 className="mt-1 block w-full py-3 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                value={formData.subject}
+                value={formData.phone_number}
                 onChange={handleChange}
               />
               </div>
@@ -126,11 +120,11 @@ function Contact() {
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Address:</label>
               <input
                 type="text"
-                id="Address"
-                name="Address"
+                id="address"
+                name="address"
                 placeholder="Address..."
                 className="mt-1 block w-full py-3 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                value={formData.subject}
+                value={formData.address}
                 onChange={handleChange}
               />
               </div>
@@ -138,11 +132,11 @@ function Contact() {
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Business Name:</label>
               <input
                 type="text"
-                id="subject"
-                name="subject"
+                id="business"
+                name="business"
                 placeholder="Subject..."
                 className="mt-1 block w-full py-3 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                value={formData.subject}
+                value={formData.business}
                 onChange={handleChange}
               />
             </div>
@@ -163,9 +157,9 @@ function Contact() {
               className={`w-full py-3 px-4 bg-black text-white rounded-md font-medium shadow-sm hover:opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 ${sending ? "opacity-50 cursor-not-allowed" : ""}`}
               disabled={sending}
             >
-              {sending ? "Submitting..." : "Submit"}
+              {sending ? <PacmanLoader size={9} color="#ffffff" /> : "Submit"}
             </button>
-            <div className="mt-3">
+            <div className="mt-3 h-20 flex flex-col items-center">
               {sent && (
                 <p className="text-green-600">Your email has been successfully sent!</p>
               )}

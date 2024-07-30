@@ -2,6 +2,7 @@ import React from 'react'
 import Productarray from './Products-array'
 import { Link } from 'react-router-dom'
 
+
 function Product() {
   return (
     <section class="text-gray-600 body-font">
