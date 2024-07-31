@@ -6,7 +6,7 @@ function About() {
   return (
     <div className='antialiased text-gray-600'>
         <div className='mb-16'>
-            <img src='/Images/about-us.svg' className=''  alt='about us' width='100%' height='100%'/>
+            <img src='/Images/about-us.png' className=''  alt='about us' width='100%' height='100%'/>
             <div className='lg:max-w-xl mx-auto lg:px-6 px-10'>
             <p className='text-4xl pt-16 font-bold text-black'>About Us</p>
             <p className=''>VANG Technologies is a leading provider of customized software solutions for the hospitality industry. Our expertise includes Front Office systems, Point of Sale solutions, Inventory Management, MRP Billing, and Bar Retail Software. Designed to streamline operations and enhance efficiency, our products are crafted to meet the diverse needs of our clients.

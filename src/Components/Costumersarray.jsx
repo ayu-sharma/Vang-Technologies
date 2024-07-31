@@ -32,7 +32,7 @@ const costumers = [
     {
         id:"7",
         img:"/Images/renuka.svg",
-        name:"Renuka Lodge"
+        name:"Hotel Renuka, Bnagalore"
     },
     {
         id:"8",

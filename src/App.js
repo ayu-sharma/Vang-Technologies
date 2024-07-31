@@ -15,10 +15,10 @@ function App() {
     <Router>
       <Scrolltop />
       <div className='min-h-[100vh] w-full relative flex flex-col justify-between'>
-        <div className='z-10 fixed w-full'>
+        <div className='z-10 w-full'>
           <Navbar/>
         </div>
-        <div className='flex-grow mt-16'> {/* added margin-top to avoid overlap with fixed Navbar */}
+        <div className='flex-grow'> {/* added margin-top to avoid overlap with fixed Navbar */}
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />

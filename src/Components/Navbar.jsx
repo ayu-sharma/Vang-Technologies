@@ -28,7 +28,7 @@ function ResponsiveAppBar() {
   }
 
   return (
-    <nav className="navbar navbar-light bg-light navbar-expand-lg px-7 lg:px-16" style={{ zIndex: 1000, position: 'fixed', width: '100%' }}>
+    <nav className="navbar navbar-light bg-light navbar-expand-lg px-7 lg:px-16" style={{ zIndex: 1000}}>
       <div className="container-fluid justify-between gap-1">
         <Link to="/" className="navbar-brand lg:text-3xl font-semibold justify-center items-center lg:mx-10 md:mr-10" >
           <img src="/Images/company-logo.svg" alt="navbar" height="60" width="60" />
