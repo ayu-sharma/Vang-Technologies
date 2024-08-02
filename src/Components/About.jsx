@@ -4,7 +4,7 @@ import Funfacts from './Funfacts';
 
 function About() {
   return (
-    <div className='antialiased text-gray-600'>
+    <div className='antialiased text-gray-600 pt-20 lg:pt-0'>
         <div className='mb-16'>
             <img src='/Images/about-us.png' className=''  alt='about us' width='100%' height='100%'/>
             <div className='lg:max-w-xl mx-auto lg:px-6 px-10'>

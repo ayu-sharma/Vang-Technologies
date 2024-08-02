@@ -56,7 +56,7 @@ function Contact() {
         {/* Map Section */}
         <div className="rounded-lg overflow-hidden p-10 flex flex-col">
           <div className=''>
-    <div class="absolute inset-0 bg-gray-300">
+    <div class="absolute inset-0 bg-gray-300 lg:top-0 top-20">
     <iframe width="100%" 
     frameborder="0" 
     height="100%"
@@ -83,9 +83,9 @@ function Contact() {
         </div>
 
         {/* Contact Form Section */}
-        <div className='px-8 py-5 lg:py-3'>
+        <div className='px-8 py-5 lg:py-3 mt-14 lg:mt-0'>
         <div className="lg:w-full md:w-2/3 md:mx-auto flex flex-col justify-center items-center rounded-lg bg-gray-100 px-7 py-4 lg:py-2 relative">
-          <h2 className="text-gray-900 text-sm mb-4 font-medium">GET IN TOUCH</h2>
+          <h2 className="text-gray-900 text-sm font-normal lg:text-2xl mb-4 lg:font-bold">GET IN TOUCH</h2>
           <form onSubmit={handleSubmit} className="w-full max-w-md">
           <div className="mb-2">
               <label htmlFor="subject" className="block text-xs font-medium text-gray-700">Your Name:</label>
@@ -98,6 +98,9 @@ function Contact() {
                 value={formData.name}
                 onChange={handleChange}
               />
+              {errorMessage && (
+                <p className="text-red-600 font-light lg:text-sm text-xs">Please enter your Name</p>
+              )}
             </div>
             <div className="mb-2">
               <label htmlFor="Email" className="block text-xs font-medium text-gray-700">Your Email:</label>
@@ -110,6 +113,9 @@ function Contact() {
                 value={formData.email}
                 onChange={handleChange}
               />
+              {errorMessage && (
+                <p className="text-red-600 font-light lg:text-sm text-xs">Please enter your email address</p>
+              )}
             </div>
             <div className="mb-2">
               <label htmlFor="subject" className="block text-xs font-medium text-gray-700">Phone Number:</label>
@@ -118,10 +124,15 @@ function Contact() {
                 id="phone_number"
                 name="phone_number"
                 placeholder="Phone Number..."
+                style={{ WebkitAppearance: 'none',
+                  MozAppearance: 'textfield'}}
                 className="mt-1 block w-full py-3 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-xs"
                 value={formData.phone_number}
                 onChange={handleChange}
               />
+              {errorMessage && (
+                <p className="text-red-600 font-light lg:text-sm text-xs">Please enter your Mobile Number</p>
+              )}
               </div>
             <div className="mb-2">
               <label htmlFor="subject" className="block text-xs font-medium text-gray-700">Address:</label>
@@ -134,6 +145,9 @@ function Contact() {
                 value={formData.address}
                 onChange={handleChange}
               />
+              {errorMessage && (
+                <p className="text-red-600 font-light lg:text-sm text-xs">Please enter your Address</p>
+              )}
               </div>
             <div className="mb-2">
               <label htmlFor="subject" className="block text-xs font-medium text-gray-700">Business Name:</label>
@@ -146,6 +160,9 @@ function Contact() {
                 value={formData.business}
                 onChange={handleChange}
               />
+              {errorMessage && (
+                <p className="text-red-600 font-light lg:text-sm text-xs">Please enter your Busniness Name</p>
+              )}
             </div>
             <div className="mb-5">
               <label htmlFor="message" className="block text-xs font-medium text-gray-700">Message:</label>
@@ -158,6 +175,9 @@ function Contact() {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
+              {errorMessage && (
+                <p className="text-red-600 font-light lg:text-sm text-xs">Please enter the message</p>
+              )}
             </div>
             <button
               type="submit"
@@ -166,12 +186,9 @@ function Contact() {
             >
               {sending ? <PacmanLoader size={9} color="#ffffff" /> : "Submit"}
             </button>
-            <div className="mt-3 h-20 flex flex-col items-center">
+            <div className="mt-3 h-9 flex flex-col items-center">
               {sent && (
-                <p className="text-green-600">Your email has been successfully sent!</p>
-              )}
-              {errorMessage && (
-                <p className="text-red-600">{errorMessage}</p>
+                <p className="text-green-600 font-light lg:text-sm text-xs">Your email has been successfully sent!</p>
               )}
             </div>
           </form>

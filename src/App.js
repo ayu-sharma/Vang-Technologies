@@ -16,7 +16,7 @@ function App() {
       <Scrolltop />
       <div className='min-h-[100vh] w-full relative flex flex-col justify-between'>
         <div className='z-10 w-full'>
-          <Navbar/>
+          <Navbar className=""/>
         </div>
         <div className='flex-grow'> {/* added margin-top to avoid overlap with fixed Navbar */}
           <Routes>

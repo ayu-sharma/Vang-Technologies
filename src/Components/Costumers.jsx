@@ -3,7 +3,7 @@ import costumers from './Costumersarray'
 function Costumers() {
   return (
     <div>
-       <section className='text-gray-600 py-24 lg:px-9'>
+       <section className='text-gray-600 body-font py-24'>
         <div className='lg:mx-16 mx-7'>
             <p className='lg:text-4xl text-3xl font-bold mb-11'>
                 Our Costumers

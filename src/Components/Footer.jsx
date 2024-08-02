@@ -82,9 +82,11 @@ function Footer() {
       <Link to="/" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         <img src='/Images/company-logo.svg' alt='footercompanylogo' height={60} width={60}/>
       </Link>
-      <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2024 Vang Technologies —
-        <a href="https://www.facebook.com/people/Vang-Softwares/100010899492337" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@vangtechnologies</a>
+      <div className='text-center'>
+      <p class=" text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2024 Vang Technologies —
+        <a href="https://www.facebook.com/people/Vang-Softwares/100010899492337" rel="noopener noreferrer" class=" text-gray-600 ml-1" target="_blank">@vangtechnologies</a>
       </p>
+      </div>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
         <a href='https://www.facebook.com/people/Vang-Softwares/100010899492337' rel="noreferrer" target="_blank" class="text-gray-500">
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">

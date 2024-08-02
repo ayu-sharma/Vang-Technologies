@@ -9,7 +9,7 @@ function Home({t}) {
     { src: '/Images/home-page-4.png', alt: '4' },]
   return (
     <>
-   <section className="text-gray-600 body-font">
+   <section className="text-gray-600 body-font pt-20 lg:pt-0">
         {/* <img className="min-h-screen mb-10 object-cover object-center" alt="hero" src="/Images/home-page-1.svg" /> */}
         <div className="mb-10">
           <CarousalPage className="" images={images}/>
