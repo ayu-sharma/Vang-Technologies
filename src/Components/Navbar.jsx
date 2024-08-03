@@ -49,18 +49,12 @@ function ResponsiveAppBar() {
         <Link to="/" className={`navbar-brand md:text-3xl font-semibold justify-center items-center md:mx-10 md:mr-10`} >
           <img src="/Images/company-logo.svg" alt="navbar" height="60" width="60" />
         </Link>
-        <div className='md:hidden' style={{zIndex: "1000", position: "relative"}}>
-        <button onClick={toggleHamburger} className="flex flex-col justify-center">
-            {/* <div className={`w-full h-0.5 bg-black ${isOpen ? 'rotate-45 translate-y-1.5': ''}`}></div>
-            <div className={`w-full h-0.5 bg-black ${isOpen ? 'opacity-0' : ''}`}></div>
-            <div className={`w-full h-0.5 bg-black ${isOpen ? '-rotate-45 -translate-y-1.5 ease-out duration-[0.53s]' : ''}`}></div> */}
-            <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openTop' : 'animate-closeTop'}`}></div>
-              <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openMiddle' : 'animate-closeMiddle'}`}></div>
-              <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div>
-              {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> */}
-          </button>
+        <div className='md:hidden flex items-center' style={{ zIndex: 1000, position: 'relative', height: '40px' }}>
+            <button onClick={toggleHamburger} className="flex flex-col justify-center space-y-1">
+                <div className={`w-6 h-0.5 bg-black ${isOpen ? 'animate-openTop' : 'animate-closeTop'}`}></div>
+                <div className={`w-6 h-0.5 bg-black ${isOpen ? 'animate-openMiddle' : 'animate-closeMiddle'}`}></div>
+                <div className={`w-6 h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div>
+            </button>
         </div>
         <div className={`navbar-collapse ${isOpen ? "block" : "hidden"}`}>
           <ul className="navbar-nav ml-auto md:flex md:items-center pt-3">

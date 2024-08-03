@@ -45,6 +45,10 @@ module.exports = {
         smNavClose: {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
+        },
+        factAni: {
+          '0%': { opacity: '0'},
+          '100%': { opacity: '1'}
         }
       },
       animation: {
@@ -56,6 +60,7 @@ module.exports = {
         closeBottom: 'closeBottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
         smNav: 'smNav 0.3s ease-in-out forwards',
         smNavClose: 'smNavClose 0.3s ease-in-out forwards',
+        factAni: 'factAni 0.3s ease-in-out forwards'
       },
 
         screens: {
