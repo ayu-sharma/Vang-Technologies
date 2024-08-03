@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Switchformods from './Switchformods';
 
 
 // const languages = [
@@ -55,12 +54,12 @@ function ResponsiveAppBar() {
             {/* <div className={`w-full h-0.5 bg-black ${isOpen ? 'rotate-45 translate-y-1.5': ''}`}></div>
             <div className={`w-full h-0.5 bg-black ${isOpen ? 'opacity-0' : ''}`}></div>
             <div className={`w-full h-0.5 bg-black ${isOpen ? '-rotate-45 -translate-y-1.5 ease-out duration-[0.53s]' : ''}`}></div> */}
-            {/* <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openTop' : 'animate-closeTop'}`}></div>
+            <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openTop' : 'animate-closeTop'}`}></div>
               <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openMiddle' : 'animate-closeMiddle'}`}></div>
-              <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div> */}
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div>
+              {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> */}
           </button>
         </div>
         <div className={`navbar-collapse ${isOpen ? "block" : "hidden"}`}>
