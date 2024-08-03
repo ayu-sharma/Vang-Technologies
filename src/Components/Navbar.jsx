@@ -50,7 +50,7 @@ function ResponsiveAppBar() {
         <Link to="/" className={`navbar-brand md:text-3xl font-semibold justify-center items-center md:mx-10 md:mr-10`} >
           <img src="/Images/company-logo.svg" alt="navbar" height="60" width="60" />
         </Link>
-        <div className='md:hidden' style={{zIndex: "1000"}}>
+        <div className='md:hidden' style={{zIndex: "1000", position: "relative"}}>
         <button onClick={toggleHamburger} className="flex flex-col justify-center">
             {/* <div className={`w-full h-0.5 bg-black ${isOpen ? 'rotate-45 translate-y-1.5': ''}`}></div>
             <div className={`w-full h-0.5 bg-black ${isOpen ? 'opacity-0' : ''}`}></div>
