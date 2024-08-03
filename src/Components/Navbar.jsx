@@ -13,7 +13,8 @@ import Switchformods from './Switchformods';
 function ResponsiveAppBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleHamburger = () => {
+  const toggleHamburger = (event) => {
+    event.preventDefault()
     setIsOpen(!isOpen);
   }
 
@@ -49,14 +50,17 @@ function ResponsiveAppBar() {
         <Link to="/" className={`navbar-brand md:text-3xl font-semibold justify-center items-center md:mx-10 md:mr-10`} >
           <img src="/Images/company-logo.svg" alt="navbar" height="60" width="60" />
         </Link>
-        <div className='md:hidden'>
-        <button onClick={toggleHamburger} className="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 top-6 right-6">
+        <div className='md:hidden' style={{zIndex: "1000"}}>
+        <button onClick={toggleHamburger} className="flex flex-col justify-center">
             {/* <div className={`w-full h-0.5 bg-black ${isOpen ? 'rotate-45 translate-y-1.5': ''}`}></div>
             <div className={`w-full h-0.5 bg-black ${isOpen ? 'opacity-0' : ''}`}></div>
             <div className={`w-full h-0.5 bg-black ${isOpen ? '-rotate-45 -translate-y-1.5 ease-out duration-[0.53s]' : ''}`}></div> */}
-            <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openTop' : 'animate-closeTop'}`}></div>
+            {/* <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openTop' : 'animate-closeTop'}`}></div>
               <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openMiddle' : 'animate-closeMiddle'}`}></div>
-              <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div>
+              <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div> */}
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
           </button>
         </div>
         <div className={`navbar-collapse ${isOpen ? "block" : "hidden"}`}>
