@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from "axios";
 import {PacmanLoader} from 'react-spinners';
+import "../App.css"
 function Contact() {
   const [formData, setFormData] = useState({
     name:"",

@@ -9,7 +9,6 @@ import Displayproduct from './Components/Displayproduct';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Scrolltop from './Components/Scrolltop';
 import Costumer from './Components/Costumers';
-
 function App() {
   return (
     <Router>

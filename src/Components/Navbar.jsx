@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Switchformods from './Switchformods';
 
 
 // const languages = [
@@ -43,8 +44,8 @@ function ResponsiveAppBar() {
 
   return (
     <ScreenNav>
-    <nav className={`navbar navbar-light bg-light navbar-expand-md px-7 md:px-16 w-full`}>
-      <div className="container-fluid justify-between gap-1">
+    <nav className={`navbar navbar-light bg-light navbar-expand-md px-7`}>
+      <div className="container-fluid items-center">
         <Link to="/" className={`navbar-brand md:text-3xl font-semibold justify-center items-center md:mx-10 md:mr-10`} >
           <img src="/Images/company-logo.svg" alt="navbar" height="60" width="60" />
         </Link>
@@ -58,24 +59,24 @@ function ResponsiveAppBar() {
               <div className={`w-full h-0.5 bg-black ${isOpen ? 'animate-openBottom' : 'animate-closeBottom'}`}></div>
           </button>
         </div>
-        <div className={`navbar-collapse mx-auto justify-between ${isOpen ? "block" : "hidden"}`}>
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link active cursor-pointer rounded md:rounded-none md:px-0 md:p-0 md:mb-0 mb-3"  style={{ fontSize: "12px" }} aria-current="page" to="/">Home</Link>
+        <div className={`navbar-collapse ${isOpen ? "block" : "hidden"}`}>
+          <ul className="navbar-nav ml-auto md:flex md:items-center pt-3">
+            <li className="nav-item ">
+              <Link onClick={closeMenu} className="nav-link active cursor-pointer"  style={{ fontSize: "12px" }} aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer md:px-0 md:py-2 md:mb-0 mb-3" style={{ fontSize: "12px" }} to="/about">About Us</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer " style={{ fontSize: "12px" }} to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer md:px-0 md:py-2 md:mb-0 mb-3" style={{ fontSize: "12px" }} to="/products">Our Products</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "12px" }} to="/products">Our Products</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer md:px-0 md:py-2  md:mb-0 mb-3" style={{ fontSize: "12px" }} to="/costumers">Our Costumers</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "12px" }} to="/costumers">Our Costumers</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer md:px-0 md:py-2 md:mb-0 mb-3" style={{ fontSize: "12px" }} to="/contact">Contact Us</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "12px" }} to="/contact">Contact Us</Link>
             </li>
-           
+            {/* <Switchformods /> */}
           </ul>
         </div>
       </div>
