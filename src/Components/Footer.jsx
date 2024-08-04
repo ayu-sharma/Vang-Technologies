@@ -37,7 +37,7 @@ function Footer() {
             <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>Please feel free to contact:</p>
           </li>
           <li>
-            <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>Arun Sharma:<a className='text-indigo-500 hover:text-indigo-400' style={{textDecoration:"none"}} href='callto: 9380078320'> 9380078320</a></p>
+            <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>Arun Sharma:<a className='text-indigo-500 hover:text-indigo-400' style={{textDecoration:"none"}} href='tel: 9380078320'> 9380078320</a></p>
           </li>
           <li>
             <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>or mail us on:</p>
