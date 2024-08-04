@@ -18,7 +18,7 @@ function Statistics() {
         <p class="leading-relaxed">Costumers</p>
       </div>
       <div class="p-4 sm:w-1/4 w-1/2">
-        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">7</h2>
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">4</h2>
         <p class="leading-relaxed">Products</p>
       </div>
     </div>
