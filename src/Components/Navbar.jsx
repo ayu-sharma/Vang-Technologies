@@ -59,19 +59,19 @@ function ResponsiveAppBar() {
         <div className={`navbar-collapse ${isOpen ? "block" : "hidden"}`}>
           <ul className="navbar-nav ml-auto md:flex md:items-center pt-3">
             <li className="nav-item ">
-              <Link onClick={closeMenu} className="nav-link active cursor-pointer"  style={{ fontSize: "12px" }} aria-current="page" to="/">Home</Link>
+              <Link onClick={closeMenu} className="nav-link active cursor-pointer"  style={{ fontSize: "14px" }} aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer " style={{ fontSize: "12px" }} to="/about">About Us</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer " style={{ fontSize: "14px" }} to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "12px" }} to="/products">Our Products</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "14px" }} to="/products">Our Products</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "12px" }} to="/costumers">Our Costumers</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "14px" }} to="/costumers">Our Costumers</Link>
             </li>
             <li className="nav-item">
-              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "12px" }} to="/contact">Contact Us</Link>
+              <Link onClick={closeMenu} className="nav-link cursor-pointer" style={{ fontSize: "14px" }} to="/contact">Contact Us</Link>
             </li>
             {/* <Switchformods /> */}
           </ul>
