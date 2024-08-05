@@ -21,7 +21,7 @@ function Costumers() {
         <div className='relative'>
           <img className='absolute right-72 w-10 md:w-auto md:top-0 top-4 md:right-[440px]' src="/Images/arrow.svg" alt="arrow" />
         <p className='font-bold absolute md:top-7 top-8 right-8 md:right-32 md:text-lg text-sm'>
-                And 200 more hotels and restaurant
+                And 500 more hotels and restaurant
             </p>
             </div>
        </section>
