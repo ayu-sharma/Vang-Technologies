@@ -71,7 +71,7 @@ function Footer() {
             <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>Power automation integration</p>
           </li>
           <li>
-            <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>Third party integration</p>
+            <p class="text-gray-600 text-xs hover:text-gray-800" style={{margin:"2px"}}>Channel Manager Integration</p>
           </li>
         </nav>
       </div>
